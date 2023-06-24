@@ -1,0 +1,49 @@
+{
+    "name": "alphaolomi/tz-phone-number",
+    "description": "This is my package tz-phone-number",
+    "keywords": [
+        "alphaolomi",
+        "phone-number",
+        "tz-phone-number"
+    ],
+    "homepage": "https://github.com/alphaolomi/tz-phone-number",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alpha Olomi",
+            "email": "alphaolomi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.20",
+        "laravel/pint": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alphaolomi\\TzPhoneNumber\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alphaolomi\\TzPhoneNumber\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

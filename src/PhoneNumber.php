@@ -17,13 +17,13 @@ class PhoneNumber
         }
 
         // Check if the phone number is a string or an integer
-        if (!is_string($phoneNumber) && !is_int($phoneNumber)) {
+        if (! is_string($phoneNumber) && ! is_int($phoneNumber)) {
             throw new \InvalidArgumentException('Phone number must be a string or an integer');
         }
 
         // Check if the phone number is an integer and convert it to a string
         if (is_int($phoneNumber)) {
-            $phoneNumber = (string) '0' . $phoneNumber;
+            $phoneNumber = (string) '0'.$phoneNumber;
         }
 
         // Check if the phone number is a string and it contains only digits
@@ -39,13 +39,13 @@ class PhoneNumber
         // Check if the phone number is a string and it contains only digits
         if (strlen($phoneNumber) === 10) {
             // remove the leading zero with the country code
-            $phoneNumber = '255' . substr($phoneNumber, 1);
+            $phoneNumber = '255'.substr($phoneNumber, 1);
         }
 
         // Check if the phone number is a string and it contains only digits
         if (strlen($phoneNumber) === 12) {
             // remove the leading zero with the country code
-            $phoneNumber = '255' . substr($phoneNumber, 2);
+            $phoneNumber = '255'.substr($phoneNumber, 2);
         }
 
         // Only accept phone numbers that start with 255 or 0

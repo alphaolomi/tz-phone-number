@@ -7,7 +7,6 @@ it('can make new instance', function () {
     expect($phoneNumber)->toBeInstanceOf(PhoneNumber::class);
 });
 
-
 it('can get phone number', function ($mobileNumber) {
     $phoneNumber = new PhoneNumber($mobileNumber);
     expect($phoneNumber)->toBeInstanceOf(PhoneNumber::class);

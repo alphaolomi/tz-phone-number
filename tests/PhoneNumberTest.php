@@ -15,5 +15,5 @@ it('can get phone number', function ($mobileNumber) {
 })->with([
     '0712345678',
     new PhoneNumber('0712345678'),
-    '123'
+    '123',
 ]);
